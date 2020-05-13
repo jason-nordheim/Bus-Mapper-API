@@ -19,7 +19,7 @@ class BusesController < ApplicationController
     def destroy 
         @bus = find_bus_by_id()
         @bus.destroy() 
-        render status: 200 
+        redirect_to action: 'index'
     end 
 
     private
